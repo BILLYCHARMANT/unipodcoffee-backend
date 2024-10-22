@@ -33,7 +33,7 @@ export const createItemController = async (req, res) => {
   } catch (error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       status: StatusCodes.INTERNAL_SERVER_ERROR,
-      message: "Error creating item",
+      message:"Error creating Item",
     });
   }
 };

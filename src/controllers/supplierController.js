@@ -10,7 +10,7 @@ export const getSuppliers = async (req, res) => {
   }
 };
 
-export const getSupplierById = async (req, res) => {
+export const getSupplierByIdController = async (req, res) => {
   try {
     const { id } = req.params;
     const supplier = await getSupplierById(id);
@@ -23,7 +23,7 @@ export const getSupplierById = async (req, res) => {
   }
 };
 
-export const createSupplier = async (req, res) => {
+export const createSupplierController = async (req, res) => {
   try {
     const supplierData = req.body;
     const newSupplier = await createSupplier(supplierData);
@@ -33,7 +33,7 @@ export const createSupplier = async (req, res) => {
   }
 };
 
-export const updateSupplier = async (req, res) => {
+export const updateSupplierController = async (req, res) => {
   try {
     const { id } = req.params;
     const supplierData = req.body;
@@ -44,7 +44,7 @@ export const updateSupplier = async (req, res) => {
   }
 };
 
-export const deleteSupplier = async (req, res) => {
+export const deleteSupplierController = async (req, res) => {
   try {
     const { id } = req.params;
     await deleteSupplier(id);

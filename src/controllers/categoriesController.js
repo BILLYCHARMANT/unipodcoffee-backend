@@ -15,7 +15,7 @@ export const getCategories = async (req, res) => {
   }
 };
 
-export const getCategoryById = async (req, res) => {
+export const getCategoryByIdController = async (req, res) => {
   try {
     const { id } = req.params;
     const category = await getCategoryById(id);
@@ -28,7 +28,7 @@ export const getCategoryById = async (req, res) => {
   }
 };
 
-export const createCategory = async (req, res) => {
+export const createCategoryController = async (req, res) => {
   try {
     const categoryData = req.body;
     const newCategory = await createCategory(categoryData);
@@ -38,7 +38,7 @@ export const createCategory = async (req, res) => {
   }
 };
 
-export const updateCategory = async (req, res) => {
+export const updateCategoryController = async (req, res) => {
   try {
     const { id } = req.params;
     const categoryData = req.body;
@@ -49,7 +49,7 @@ export const updateCategory = async (req, res) => {
   }
 };
 
-export const deleteCategory = async (req, res) => {
+export const deleteCategoryController = async (req, res) => {
   try {
     const { id } = req.params;
     await deleteCategory(id);
